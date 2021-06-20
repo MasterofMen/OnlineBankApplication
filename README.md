@@ -34,7 +34,7 @@ User Stories:
 24. Information displayed on the pages is taken from the database
 25. Information entered into the pages is stored in the database
 
-Technical Challenges
+Technical Challenges                                                                                                                
 Problem: Designing the pages, deciding how each page should look                            
 Solution: Checked out some Banks websites and based mine off theirs
 
