@@ -39,9 +39,9 @@ Problem: Designing the pages, deciding how each page should look
 Solution: Checked out some Banks websites and based mine off theirs
 
 Problem: Deciding what entities are needed for the bank application
-Looked up what information was displayed on a bank application and what information what required to create a bank application
+Solution: Looked up what information was displayed on a bank application and what information what required to create a bank application
 Then put them in groups and created tables based off those groups
 
 Problem: Getting the update function to work on the Profile page
-Used @ModelAttribute for updating and then checked which properties weren't null and then updated that property
+Solution: Used @ModelAttribute for updating and then checked which properties weren't null and then updated that property
 
