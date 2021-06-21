@@ -1,0 +1,92 @@
+body{
+    background-color:rgb(70, 245, 70);
+}
+.nav-link{
+    color:black;
+    font-size: 40px;
+}
+.container{
+    width: 300px;
+    height: 320px;
+    background-color: white;
+    border-radius: 15px;
+}
+.btn-lg{
+    margin-top: 10px;
+    width: 180px;
+    height: 70px;
+    font-size: 20px;
+}
+.validation:focus:invalid{
+    border-bottom: 2px solid red;
+}
+.validation:valid{
+    border-bottom: 2px solid green;
+}
+label{
+    font-size: 30px;
+    padding-top: 15px;
+}
+.btn{
+    margin-top: 5%;
+    padding: 20px;
+    width: 250px;
+    background-color: white;
+    color:black;
+    border-color: black;
+}
+.btn:hover{
+    background-color: grey;
+    border-color:rgb(66, 66, 66);
+}
+.btn:disabled{
+    background-color: white;
+    color:black;
+    border-color: black;
+}
+a:link{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+p{
+    font-size: 20px;
+}
+#profile:hover{
+    color: grey;
+}
+.dropbtn {
+  background-color: green;
+  color: white;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  width: 150px;
+  z-index: 1;
+  box-shadow: 5px 10px 15px grey;
+}
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+}
+.dropdown-content a:hover {background-color: grey;}
+.dropdown:hover .dropdown-content {display: block;}
+#account:hover{
+  background-color: grey;
+}
+#account{
+  text-align: center; 
+  border-bottom: 2px solid grey;
+}
+  
