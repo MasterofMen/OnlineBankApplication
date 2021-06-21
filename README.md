@@ -6,6 +6,8 @@ Create database called bank
 Run the BankSQL.sql files to create the tables
 Make sure to put your username and password for your database in the application.properties file
 Run the BankApplication.java file as a Java Application or Spring Boot app
+Username: test
+Password: 1!Test
 
 User Stories:
 1. Create a html Log In page
@@ -34,14 +36,17 @@ User Stories:
 24. Information displayed on the pages is taken from the database
 25. Information entered into the pages is stored in the database
 
-Technical Challenges
-Problem: Designing the pages, deciding how each page should look
+Technical Challenges                                                                                                                
+Problem: Designing the pages, deciding how each page should look                            
 Solution: Checked out some Banks websites and based mine off theirs
 
-Problem: Deciding what entities are needed for the bank application
-Looked up what information was displayed on a bank application and what information what required to create a bank application
+Problem: Deciding what entities are needed for the bank application                                     
+Solution: Looked up what information was displayed on a bank application and what information what required to create a bank application
 Then put them in groups and created tables based off those groups
 
-Problem: Getting the update function to work on the Profile page
-Used @ModelAttribute for updating and then checked which properties weren't null and then updated that property
+Problem: Getting the update function to work on the Profile page                                              
+Solution: Used @ModelAttribute for updating and then checked which properties weren't null and then updated that property
+
+Problem: Getting the date for past transactions to appear without the time                                                  
+Solution: Used SimpleDateFormat to make it appear correctly
 
