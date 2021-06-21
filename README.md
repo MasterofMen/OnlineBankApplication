@@ -45,3 +45,6 @@ Then put them in groups and created tables based off those groups
 Problem: Getting the update function to work on the Profile page                                              
 Solution: Used @ModelAttribute for updating and then checked which properties weren't null and then updated that property
 
+Problem: Getting the date for past transactions to appear without the time                                                  
+Solution: Used SimpleDateFormat to make it appear correctly
+
