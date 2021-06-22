@@ -25,8 +25,8 @@ User Stories:
 13. Create DTO classes that match up to the SQL tables
 14. Create the DAO interfaces for the Entities
 15. Create Transaction, Account and User Services
-16. Create a controller for viewing the pages
-17. Create a controller to add functionality to the pages
+16. Create a controller class for viewing the pages
+17. Create a controller class to add functionality to the pages
 18. Connect to database through application.properties file and have spring boot read .jsp files
 19. Create a method for each .jsp page in the ViewController page
 20. Add methods to UserController that add functionality to the pages and add required html to .jsp pages
