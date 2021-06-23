@@ -38,4 +38,9 @@ public class AccountService {
 	public Account saveAccount(Account account) {
 		return accountD.save(account);
 	}
+
+	// deletes account by userId
+	public void deleteAccount(int id) {
+		accountD.deleteByuserId(id);
+	}
 }

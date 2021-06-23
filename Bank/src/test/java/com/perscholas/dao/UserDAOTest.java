@@ -1,7 +1,6 @@
 package com.perscholas.dao;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -9,13 +8,19 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import com.bank.sean.grano.dao.UserDAO;
 import com.bank.sean.grano.dto.User;
+import com.bank.sean.grano.service.UserService;
 
 class UserDAOTest {
-
+	@Mock
 	UserDAO userD;
+	@InjectMocks
+	UserService userS;
 	List<String> usernames = new ArrayList<>();
 
 	@BeforeEach
@@ -23,7 +28,7 @@ class UserDAOTest {
 		usernames.add("Bob1");
 		usernames.add("Bob2");
 		usernames.add("Bob3");
-		userD = mock(UserDAO.class);
+		MockitoAnnotations.initMocks(this);
 		when(userD.findByUsername("bb123"))
 				.thenReturn(new User(1, "Bob", "Bobby", "bob@gmail.com", "123456789", "bb123", "1!Bob"));
 		when(userD.findById(1)).thenReturn(new User(1, "Bob", "Bobby", "bob@gmail.com", "123456789", "bb123", "1!Bob"));
@@ -34,7 +39,7 @@ class UserDAOTest {
 
 	@Test
 	void testFindByUsername() {
-		User user = userD.findByUsername("bb123");
+		User user = userS.findUserbyUsername("bb123");
 		User user2 = mockUser();
 		user2.setId(1);
 		assertEquals(user, user2);
@@ -42,7 +47,7 @@ class UserDAOTest {
 
 	@Test
 	void testFindByIdInt() {
-		User user = userD.findById(1);
+		User user = userS.findByUserId(1);
 		User user2 = mockUser();
 		user2.setId(1);
 		assertEquals(user, user2);
@@ -50,7 +55,7 @@ class UserDAOTest {
 
 	@Test
 	void testCreateUser() {
-		User user = userD.save(mockUser());
+		User user = userS.createUser(mockUser());
 		User user2 = mockUser();
 		user2.setId(1);
 		assertEquals(user, user2);
@@ -58,7 +63,7 @@ class UserDAOTest {
 
 	@Test
 	void getAllUsernames() {
-		assertEquals(usernames, userD.findAllUsernames());
+		assertEquals(usernames, userS.allUsernames());
 	}
 
 	User mockUser() {

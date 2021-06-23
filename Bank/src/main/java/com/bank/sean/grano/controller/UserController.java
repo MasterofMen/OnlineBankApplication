@@ -29,7 +29,7 @@ public class UserController {
 	TransactionService transS;
 
 	// checks to see if the login credentials are valid
-	@GetMapping("/valid")
+	@GetMapping({ "/valid", "/login/valid" })
 	public ModelAndView login(@RequestParam String username, @RequestParam String password) {
 		if (userS.logIn(username, password)) {
 			ModelAndView mav = new ModelAndView("ViewAccount");
@@ -161,5 +161,19 @@ public class UserController {
 		mav.addObject("account", account);
 		mav.addObject("tran", trans);
 		return mav;
+	}
+
+	// Deletes the account
+	@GetMapping("/login/{id}")
+	public ModelAndView deleteAccount(@PathVariable int id) {
+		User user = userS.findByUserId(id);
+		Account account = accountS.findAccountByUserId(id);
+		transS.deleteTransaction(account.getAccountId());
+		accountS.deleteAccount(user.getId());
+		userS.deleteUser(user.getId());
+		ModelAndView mav = new ModelAndView("index");
+		mav.addObject("valid", "Account Deleted");
+		return mav;
+
 	}
 }

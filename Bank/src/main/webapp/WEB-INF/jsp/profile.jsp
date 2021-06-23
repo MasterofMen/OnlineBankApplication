@@ -41,6 +41,7 @@
                 <a href="/Bank/ViewAccount/${User.username}"><button type="button" class="btn btn-primary">Your Page</button></a>
                 <a href="/Bank/login"><button type="button" class="btn btn-primary">Log Out</button></a>
             </form>
+            <a href="/Bank/login/${User.id}"><button type=button style="background-color:red" class="btn btn-primary">Delete Account</button></a>
             </div>
         </div>
     </body>

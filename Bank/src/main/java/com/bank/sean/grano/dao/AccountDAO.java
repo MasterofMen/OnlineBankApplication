@@ -12,4 +12,7 @@ public interface AccountDAO extends CrudRepository<Account, Integer> {
 
 	// find Account by accountId
 	Account findByAccountId(int id);
+
+	// deletes Account by userId
+	void deleteByuserId(int id);
 }

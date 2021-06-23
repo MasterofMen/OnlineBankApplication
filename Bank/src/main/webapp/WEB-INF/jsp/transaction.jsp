@@ -54,8 +54,7 @@
     var num = document.getElementById("total").innerHTML;
     var deposit = document.getElementById("deposit");
     var withdrawal = document.getElementById("withdrawal");
-    console.log(num);
-    
+    num = parseInt(num);
     function numValid(amount){
     	if(amount == 0){
     		document.getElementById("error").innerHTML = "Amount can't be zero";
@@ -74,17 +73,6 @@
     		deposit.disabled = false;
     		withdrawal.disabled = false;
     	}
-    }
-    function deposit(){
-    	var amount = document.getElementByName("amount");
-    	if(parseInt(amount) <= 0 || parseInt(num) < parstInt(amount)){
-    		document.getElementById("error").innerHTML = "You can't take more than what you have. Number must be greater than zero";
-    	}else{
-    		document.getElementById("error").innerHTML = "";
-    	}
-    }
-    function withdrawal(){
-    	
     }
     </script>
 </html>

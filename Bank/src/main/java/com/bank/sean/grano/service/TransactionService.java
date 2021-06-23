@@ -42,8 +42,13 @@ public class TransactionService {
 	}
 
 	// creates a new transaction
-	public void addTransaction(Transaction transaction) {
-		transactionD.save(transaction);
+	public Transaction addTransaction(Transaction transaction) {
+		return transactionD.save(transaction);
+	}
+
+	// deletes Transactions for account
+	public void deleteTransaction(int account_id) {
+		transactionD.deleteByAccountId(account_id);
 	}
 
 }

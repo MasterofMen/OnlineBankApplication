@@ -17,7 +17,7 @@
                     <i class="fa fa-user" id="profile" aria-hidden="true"></i></button>
                     <div class="dropdown-content">  
                         <a href="/Bank/profile/${user.username}">Profile</a>
-                        <a href="/Bank/index">Log Out</a>
+                        <a href="/Bank/login">Log Out</a>
                     </div>
                 </div>
             </h1>

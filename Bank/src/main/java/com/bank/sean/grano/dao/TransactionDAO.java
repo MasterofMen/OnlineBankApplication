@@ -11,4 +11,7 @@ import com.bank.sean.grano.dto.Transaction;
 public interface TransactionDAO extends CrudRepository<Transaction, Integer> {
 	// get 5 transactions by desc order by date of transaction
 	List<Transaction> findFirst5ByAccountIdOrderByTransDateDesc(int accountId);
+
+	// deletes all transactions where account_id=?
+	void deleteByAccountId(int account_id);
 }
