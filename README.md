@@ -10,31 +10,19 @@ Username: test
 Password: 1!Test
 
 User Stories:
-1. Create a html Log In page
-2. Create a html Create Account page
-3. Create a html View Profile page
-4. Create a html Transaction page
-5. Create a html Past Transactions page
-6. Create Css page and add inline css to pages as needed
-7. Add javascript to Create Account page for password
-8. Add javascript to Profile page to make it so User can only change one property at a time
-9. Add javascript to transaction page to ensure user inputs valid amounts
-10. Convert Html pages to .jsp pages
-11. Create SQL Tables(Entities) for bank application
-12. Create Spring Boot Bank Application
-13. Create DTO classes that match up to the SQL tables
-14. Create the DAO interfaces for the Entities
-15. Create Transaction, Account and User Services
-16. Create a controller class for viewing the pages
-17. Create a controller class to add functionality to the pages
-18. Connect to database through application.properties file and have spring boot read .jsp files
-19. Create a method for each .jsp page in the ViewController page
-20. Add methods to UserController that add functionality to the pages and add required html to .jsp pages
-21. Create testing methods for each dao method used
-22. Add exception handling
-23. Add BCrypt to password and update login validation
-24. Information displayed on the pages is taken from the database
-25. Information entered into the pages is stored in the database
+1. A page where the user can log in
+2. A page wher the user can create an account
+3. A page where the user can view their profile
+4. A page where a user can make a transaction
+5. A page where the user can see their past transactions
+6. Add color to the pages
+7. Password must contain Aa!1
+8. User can only update one property at a time
+9. User must input valid quantities for transaction
+10. Data entered by user must be stored and retrieved from a database
+11. Ensure user passwords are protected by BCrypt
+12. Make sure user information is displayed correctly on the page
+13. Make sure new information inputed by the user is stored in the database
 
 Technical Challenges                                                                                                                
 Problem: Designing the pages, deciding how each page should look                            
