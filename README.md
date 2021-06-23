@@ -1,9 +1,9 @@
 # OnlineBankApplication
 A Full-Stack Online Banking Application
 
-How to run Application:
-Create database called bank
-Run the BankSQL.sql files to create the tables
+How to run Application:                                                                       
+Create database called bank                                                                             
+Run the BankSQL.sql files to create the tables                                                              
 Make sure to put your username and password for your database in the application.properties file
 Run the BankApplication.java file as a Java Application or Spring Boot app
 Username: test
