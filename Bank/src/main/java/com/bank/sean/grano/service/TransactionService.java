@@ -47,8 +47,13 @@ public class TransactionService {
 	}
 
 	// deletes Transactions for account
-	public void deleteTransaction(int account_id) {
-		transactionD.deleteByAccountId(account_id);
+	public Boolean deleteTransaction(int account_id) {
+		try {
+			transactionD.deleteByAccountId(account_id);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 }

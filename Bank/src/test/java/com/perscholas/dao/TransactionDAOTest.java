@@ -1,6 +1,7 @@
 package com.perscholas.dao;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ class TransactionDAOTest {
 	}
 
 	@Test
-	public void testFindFirst5ByAccountIdOrderByTransDateDesc() {
+	void testFindFirst5ByAccountIdOrderByTransDateDesc() {
 		List<Transaction> trans = transS.findAllTransactionByAccountid(1);
 		for (int i = 0; i < trans.size(); i++) {
 			assertEquals(trans.get(i), mockList().get(i));
@@ -40,11 +41,16 @@ class TransactionDAOTest {
 	}
 
 	@Test
-	public void testSaveTransaction() {
+	void testSaveTransaction() {
 		Transaction transaction = transS.addTransaction(mockTransaction());
 		Transaction transaction2 = mockTransaction();
 		transaction2.setTransactionId(1);
 		assertEquals(transaction, transaction2);
+	}
+
+	@Test
+	public void deleteTransaction() {
+		assertTrue(transS.deleteTransaction(1));
 	}
 
 	Transaction mockTransaction() {

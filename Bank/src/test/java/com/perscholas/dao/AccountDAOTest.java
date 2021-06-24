@@ -1,6 +1,7 @@
 package com.perscholas.dao;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -49,6 +50,11 @@ class AccountDAOTest {
 		Account account2 = mockAccount();
 		account2.setAccountId(1);
 		assertEquals(account, account2);
+	}
+
+	@Test
+	void deleteAccount() {
+		assertTrue(accountS.deleteAccount(1));
 	}
 
 	Account mockAccount() {

@@ -40,7 +40,12 @@ public class AccountService {
 	}
 
 	// deletes account by userId
-	public void deleteAccount(int id) {
-		accountD.deleteByuserId(id);
+	public Boolean deleteAccount(int id) {
+		try {
+			accountD.deleteByuserId(id);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 }

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.bank.sean.grano.dao.UserDAO;
 import com.bank.sean.grano.dto.User;
+import com.bank.sean.grano.exception.CustomException;
 
 @Service
 @Transactional
@@ -29,14 +30,13 @@ public class UserService {
 		}
 	}
 
-	// find user by username
+	// find user by username with custom exception
 	public User findUserbyUsername(String username) {
 		try {
 			return userDao.findByUsername(username);
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new CustomException("No username found!", e);
 		}
-		return null;
 	}
 
 	// find user by id
@@ -60,7 +60,12 @@ public class UserService {
 	}
 
 	// deletes a user
-	public void deleteUser(int id) {
-		userDao.deleteById(id);
+	public Boolean deleteUser(int id) {
+		try {
+			userDao.deleteById(id);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 }

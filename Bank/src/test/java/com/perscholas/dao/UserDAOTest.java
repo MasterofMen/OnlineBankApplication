@@ -1,6 +1,7 @@
 package com.perscholas.dao;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -64,6 +65,11 @@ class UserDAOTest {
 	@Test
 	void getAllUsernames() {
 		assertEquals(usernames, userS.allUsernames());
+	}
+
+	@Test
+	void deleteUser() {
+		assertTrue(userS.deleteUser(1));
 	}
 
 	User mockUser() {
